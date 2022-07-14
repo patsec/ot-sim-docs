@@ -1,0 +1,51 @@
+site_name: 'OT-sim documentation'
+site_description: 'A place for OT-sim users to call home.'
+site_author: 'activeshadow and dnkcom'
+
+repo_name: 'patsec/ot-sim-docs'
+repo_url: 'https://github.com/patsec/ot-sim-docs'
+
+docs_dir: src
+site_dir: docs
+
+theme:
+  name: 'material'
+  language: 'en'
+  feature:
+    tabs: true
+  favicon: images/favicon.ico
+  logo: images/patria.png
+  palette:
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: 'indigo'
+      accent: 'amber'
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      media: "(prefers-color-scheme: dark)"
+      primary: 'indigo'
+      accent: 'amber'
+      toggle:
+        icon: material/brightness-3
+        name: Switch to light mode
+  custom_dir: 'theme'
+  include_sidebar: true
+
+extra:
+  social:
+    - icon: 'fontawesome/brands/github'
+      link: 'https://github.com/patsec/ot-sim'
+
+extra_css:
+  - stylesheets/style.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - toc:
+      permalink: true
