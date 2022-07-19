@@ -2,8 +2,9 @@ site_name: 'OT-sim documentation'
 site_description: 'A place for OT-sim users to call home.'
 site_author: 'activeshadow and dnkcom'
 
-repo_name: 'patsec/ot-sim-docs'
-repo_url: 'https://github.com/patsec/ot-sim-docs'
+repo_name: 'patsec/ot-sim'
+repo_url: 'https://github.com/patsec/ot-sim'
+edit_uri: 'https://github.com/patsec/ot-sim-docs/edit/main/src'
 
 docs_dir: src
 site_dir: docs
@@ -36,7 +37,7 @@ theme:
 extra:
   social:
     - icon: 'fontawesome/brands/github'
-      link: 'https://github.com/patsec/ot-sim'
+      link: 'https://github.com/patsec/ot-sim-docs'
 
 extra_css:
   - stylesheets/style.css
