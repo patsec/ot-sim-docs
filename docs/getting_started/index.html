@@ -707,13 +707,14 @@
 
 <h4 id="install-golang">Install Golang<a class="headerlink" href="#install-golang" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><code>wget -O go.tgz https://golang.org/dl/go1.18.linux-amd64.tar.gz \
-  &amp;&amp; sudo tar -C /usr/local -xzf go.tgz &amp;&amp; rm go.tgz
+  &amp;&amp; sudo tar -C /usr/local -xzf go.tgz &amp;&amp; rm go.tgz \
+  &amp;&amp; sudo ln -s /usr/local/go/bin/* /usr/local/bin
 </code></pre></div>
 
 <h3 id="install-ot-sim">Install OT-sim<a class="headerlink" href="#install-ot-sim" title="Permanent link">&para;</a></h3>
 <p>Install the OT-sim C, C++, and Golang modules.</p>
 <div class="codehilite"><pre><span></span><code>cmake -S . -B build &amp;&amp; sudo cmake --build build --target install &amp;&amp; sudo ldconfig
-make -C src/go dev-install
+sudo make -C src/go install
 </code></pre></div>
 
 <p>Install the OT-sim Python modules. This step will also install the Python HELICS code, on which some of the OT-sim Python modules depend.</p>
@@ -729,7 +730,7 @@ make -C src/go dev-install
 </code></pre></div>
 
 <h4 id="overmind">Overmind<a class="headerlink" href="#overmind" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><code>RUN wget -O overmind.gz https://github.com/DarthSim/overmind/releases/download/v2.2.2/overmind-v2.2.2-linux-amd64.gz \
+<div class="codehilite"><pre><span></span><code>wget -O overmind.gz https://github.com/DarthSim/overmind/releases/download/v2.2.2/overmind-v2.2.2-linux-amd64.gz \
   &amp;&amp; gunzip overmind.gz \
   &amp;&amp; sudo mv overmind /usr/local/bin/overmind \
   &amp;&amp; chmod +x /usr/local/bin/overmind
