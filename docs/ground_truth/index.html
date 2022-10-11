@@ -17,7 +17,7 @@
     
     
       
-        <title>I/O Module - OT-sim documentation</title>
+        <title>Ground Truth Module - OT-sim documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#io-module" class="md-skip">
+        <a href="#ground-truth-module" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              I/O Module
+              Ground Truth Module
             
           </span>
         </div>
@@ -320,21 +320,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../ground_truth/" class="md-nav__link">
-        Ground Truth Module
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -347,12 +332,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          I/O Module
+          Ground Truth Module
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        I/O Module
+        Ground Truth Module
       </a>
       
         
@@ -378,8 +363,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#helics-federate" class="md-nav__link">
-    HELICS Federate
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
@@ -388,6 +373,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/" class="md-nav__link">
+        I/O Module
+      </a>
     </li>
   
 
@@ -486,8 +486,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#helics-federate" class="md-nav__link">
-    HELICS Federate
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
@@ -504,56 +504,53 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/patsec/ot-sim-docs/edit/main/src/io.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/patsec/ot-sim-docs/edit/main/src/ground_truth.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="io-module">I/O Module<a class="headerlink" href="#io-module" title="Permanent link">&para;</a></h1>
+<h1 id="ground-truth-module">Ground Truth Module<a class="headerlink" href="#ground-truth-module" title="Permanent link">&para;</a></h1>
 <h2 id="configuration-example">Configuration Example<a class="headerlink" href="#configuration-example" title="Permanent link">&para;</a></h2>
 <p>Example section from <a href="../configuration/">configuration</a> file:</p>
-<div class="codehilite"><pre><span></span><code>&lt;io name=&quot;ot-sim-io&quot;&gt;
-    &lt;pull-endpoint&gt;tcp://127.0.0.1:1011&lt;/pull-endpoint&gt;
-    &lt;pub-endpoint&gt;tcp://127.0.0.1:1213&lt;/pub-endpoint&gt;
-    &lt;broker-endpoint&gt;localhost&lt;/broker-endpoint&gt;
-    &lt;federate-name&gt;ot-sim-io&lt;/federate-name&gt;
-    &lt;subscription&gt;
-        &lt;key&gt;OpenDSS/bus-692.voltage&lt;/key&gt;
-        &lt;type&gt;double&lt;/type&gt;
-        &lt;tag&gt;bus-692.voltage&lt;/tag&gt;
-    &lt;/subscription&gt;
-    &lt;subscription&gt;
-        &lt;key&gt;OpenDSS/line-650632.kW&lt;/key&gt;
-        &lt;type&gt;double&lt;/type&gt;
-        &lt;tag&gt;line-650632.kW&lt;/tag&gt;
-    &lt;/subscription&gt;
-    &lt;subscription&gt;
-        &lt;key&gt;OpenDSS/line-650632.kVAR&lt;/key&gt;
-        &lt;type&gt;double&lt;/type&gt;
-        &lt;tag&gt;line-650632.kVAR&lt;/tag&gt;
-    &lt;/subscription&gt;
-    &lt;subscription&gt;
-        &lt;key&gt;OpenDSS/line-650632.closed&lt;/key&gt;
-        &lt;type&gt;boolean&lt;/type&gt;
-        &lt;tag&gt;line-650632.closed&lt;/tag&gt;
-    &lt;/subscription&gt;
-    &lt;subscription&gt;
-        &lt;key&gt;OpenDSS/switch-671692.closed&lt;/key&gt;
-        &lt;type&gt;boolean&lt;/type&gt;
-        &lt;tag&gt;switch-671692.closed&lt;/tag&gt;
-    &lt;/subscription&gt;
-    &lt;publication&gt;
-        &lt;key&gt;line-650632.closed&lt;/key&gt;
-        &lt;type&gt;boolean&lt;/type&gt;
-        &lt;tag&gt;line-650632.closed&lt;/tag&gt;
-    &lt;/publication&gt;
-&lt;/io&gt;
+<div class="codehilite"><pre><span></span><code>&lt;ground-truth&gt;
+  &lt;elastic&gt;
+    &lt;endpoint&gt;http://localhost:9200&lt;/endpoint&gt;
+    &lt;index-base-name&gt;ot-sim&lt;/index-base-name&gt;
+  &lt;/elastic&gt;
+&lt;/ground-truth&gt;
 </code></pre></div>
 
-<h2 id="helics-federate">HELICS Federate<a class="headerlink" href="#helics-federate" title="Permanent link">&para;</a></h2>
-<p>The OT-sim I/O Module is always a <a href="https://helics.org/">HELICS</a> federate. In the example <a href="#configuration-example">above</a>, the I/O Module subscribes to data published out of an OpenDSS federate in a HELIC co-simulation. The HELICS <code>type</code>(s) supported in this module is <code>boolean</code> and <code>double</code> (the latter is synonymous with float). The <code>tag</code> key is OT-sim's term and is used on the internal message bus. The <code>tag</code> is similar to HELIC's term <code>topic</code>. If a <code>tag</code> is not specified, then OT-sim will use the <code>key</code>. The HELICS <code>key</code> is what HELICS will use to process the message.</p>
-<p>The <code>pull-</code> and <code>pub-endpoint</code>(s) are optional for the <code>io</code> configuration keys. It is possible to define an alternative internal message bus if you want to talk to a different one from the default in the <a href="../message_bus/">Message Bus</a>. The <code>federate-name</code> key is optional; if not provided, the <code>name</code> value in the <code>io</code> key will be used.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The ground truth module is a simple module that sends any points it sees
+published to the message bus to ElasticSearch as a document.</p>
+<p>By default, it sends the documents to an index named <code>ot-sim-YYYY.mm.dd</code>, but
+this can be configured via the <code>&lt;index-base-name&gt;</code> configuration setting.</p>
+<p>The default mapping for the index used looks like the following:</p>
+<div class="codehilite"><pre><span></span><code>{
+  &quot;mappings&quot;: {
+    &quot;properties&quot;: {
+      &quot;@timestamp&quot;: {
+        &quot;type&quot;: &quot;date&quot;
+      },
+      &quot;source&quot;: {
+        &quot;type&quot;: &quot;keyword&quot;
+      },
+      &quot;field&quot;: {
+        &quot;type&quot;: &quot;text&quot;
+      },
+      &quot;value&quot;: {
+        &quot;type&quot;: &quot;double&quot;
+      }
+    }
+  }
+}
+</code></pre></div>
+
+<p>When documents are sent to the index, <code>source</code> maps to the hostname of the
+machine ot-sim is running on and <code>field</code> maps to the point's <code>tag</code>. If the point
+has a non-zero <code>ts</code> value it's used for <code>@timestamp</code>, otherwise the current time
+is used.</p>
 
               
             </article>

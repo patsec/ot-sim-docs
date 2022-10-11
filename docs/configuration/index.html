@@ -302,6 +302,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ground-truth-module" class="md-nav__link">
+    Ground Truth Module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modbus-module" class="md-nav__link">
     Modbus Module
   </a>
@@ -385,6 +392,21 @@
     <li class="md-nav__item">
       <a href="../getting_started/" class="md-nav__link">
         Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ground_truth/" class="md-nav__link">
+        Ground Truth Module
       </a>
     </li>
   
@@ -513,6 +535,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ground-truth-module" class="md-nav__link">
+    Ground Truth Module
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#modbus-module" class="md-nav__link">
     Modbus Module
   </a>
@@ -572,6 +601,7 @@
   &lt;module name=&quot;logic&quot;&gt;ot-sim-logic-module {{config_file}}&lt;/module&gt;
   &lt;module name=&quot;modbus&quot;&gt;ot-sim-modbus-module {{config_file}}&lt;/module&gt;
   &lt;module name=&quot;dnp3&quot;&gt;ot-sim-dnp3-module {{config_file}}&lt;/module&gt;
+  &lt;module name=&quot;ground-truth&quot;&gt;ot-sim-ground-truth-module {{config_file}}&lt;/module&gt;
 &lt;/cpu&gt;
 </code></pre></div>
 
@@ -589,6 +619,15 @@
     &lt;reset&gt;1&lt;/reset&gt;
   &lt;/variables&gt;
 &lt;/logic&gt;
+</code></pre></div>
+
+<h2 id="ground-truth-module"><a href="../ground_truth/">Ground Truth Module</a><a class="headerlink" href="#ground-truth-module" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>&lt;ground-truth&gt;
+  &lt;elastic&gt;
+    &lt;endpoint&gt;http://localhost:9200&lt;/endpoint&gt;
+    &lt;index-base-name&gt;ot-sim&lt;/index-base-name&gt;
+  &lt;/elastic&gt;
+&lt;/ground-truth&gt;
 </code></pre></div>
 
 <h2 id="modbus-module"><a href="../modbus/">Modbus Module</a><a class="headerlink" href="#modbus-module" title="Permanent link">&para;</a></h2>
