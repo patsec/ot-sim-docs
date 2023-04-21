@@ -5,9 +5,11 @@ GID := $(shell id -g)
 
 .PHONY: serve-docs
 serve-docs:
-	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+	docker build -t mkdocs .
+	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs mkdocs
 
 .PHONY: build-docs
 build-docs:
-	docker run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
+	docker build -t mkdocs .
+	docker run --rm -it -v ${PWD}:/docs mkdocs build
 	sudo chown -R ${UID}:${GID} docs

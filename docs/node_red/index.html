@@ -17,7 +17,7 @@
     
     
       
-        <title>DNP3 Module - OT-sim documentation</title>
+        <title>Node-RED Module - OT-sim documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dnp3-module" class="md-skip">
+        <a href="#node-red-module" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DNP3 Module
+              Node-RED Module
             
           </span>
         </div>
@@ -241,79 +241,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          DNP3 Module
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dnp3/" class="md-nav__link">
         DNP3 Module
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-example" class="md-nav__link">
-    Configuration Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dnp3-module-overview" class="md-nav__link">
-    DNP3 Module Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="DNP3 Module Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capabilities" class="md-nav__link">
-    Capabilities
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#default-values" class="md-nav__link">
-    Default Values
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -444,11 +376,80 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../node_red/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Node-RED Module
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Node-RED Module
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-example" class="md-nav__link">
+    Configuration Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-red-module-overview" class="md-nav__link">
+    Node-RED Module Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-video" class="md-nav__link">
+    Demo Video
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ot-sim-in" class="md-nav__link">
+    ot-sim in
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ot-sim-out" class="md-nav__link">
+    ot-sim out
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -487,29 +488,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dnp3-module-overview" class="md-nav__link">
-    DNP3 Module Overview
-  </a>
-  
-    <nav class="md-nav" aria-label="DNP3 Module Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#capabilities" class="md-nav__link">
-    Capabilities
+  <a href="#node-red-module-overview" class="md-nav__link">
+    Node-RED Module Overview
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#default-values" class="md-nav__link">
-    Default Values
+      
+        <li class="md-nav__item">
+  <a href="#demo-video" class="md-nav__link">
+    Demo Video
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#ot-sim-in" class="md-nav__link">
+    ot-sim in
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ot-sim-out" class="md-nav__link">
+    ot-sim out
+  </a>
   
 </li>
       
@@ -527,112 +529,287 @@
                 
                   
 
-  <a href="https://github.com/patsec/ot-sim-docs/edit/main/src/dnp3.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/patsec/ot-sim-docs/edit/main/src/node_red.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<div><h1 id="dnp3-module">DNP3 Module<a class="headerlink" href="#dnp3-module" title="Permanent link">¶</a></h1>
+<div><h1 id="node-red-module">Node-RED Module<a class="headerlink" href="#node-red-module" title="Permanent link">¶</a></h1>
 <h2 id="configuration-example">Configuration Example<a class="headerlink" href="#configuration-example" title="Permanent link">¶</a></h2>
 <p>Example section from <a href="../configuration/">configuration</a> file:</p>
-<div class="codehilite"><pre><span></span><code>&lt;dnp3 name="dnp3-outstation" mode="server"&gt;
-    &lt;endpoint&gt;127.0.0.1:20001&lt;/endpoint&gt;
-    &lt;cold-restart-delay&gt;15&lt;/cold-restart-delay&gt;
-    &lt;outstation name="outstation-1"&gt;
-        &lt;local-address&gt;10&lt;/local-address&gt;
-        &lt;remote-address&gt;1&lt;/remote-address&gt;
-        &lt;warm-restart-delay&gt;5&lt;/warm-restart-delay&gt;
-        &lt;input type="binary"&gt;
-            &lt;address&gt;0&lt;/address&gt;
-            &lt;tag&gt;line-650632.closed&lt;/tag&gt;
-            &lt;sgvar&gt;Group1Var1&lt;/sgvar&gt;
-            &lt;egvar&gt;Group2Var1&lt;/egvar&gt;
-            &lt;class&gt;Class1&lt;/class&gt;
-        &lt;/input&gt;
-        &lt;output type="binary"&gt;
-            &lt;address&gt;10&lt;/address&gt;
-            &lt;tag&gt;line-650632.closed&lt;/tag&gt;
-            &lt;sgvar&gt;Group10Var2&lt;/sgvar&gt;
-            &lt;egvar&gt;Group11Var2&lt;/egvar&gt;
-            &lt;class&gt;Class1&lt;/class&gt;
-            &lt;sbo&gt;false&lt;/sbo&gt;
-        &lt;/output&gt;
-        &lt;input type="analog"&gt;
-            &lt;address&gt;0&lt;/address&gt;
-            &lt;tag&gt;line-650632.kW&lt;/tag&gt;
-            &lt;sgvar&gt;Group30Var6&lt;/sgvar&gt;
-            &lt;egvar&gt;Group32Var6&lt;/egvar&gt;
-            &lt;class&gt;Class1&lt;/class&gt;
-        &lt;/input&gt;
-    &lt;/outstation&gt;
-&lt;/dnp3&gt;
+<div class="codehilite"><pre><span></span><code>&lt;node-red&gt;
+  &lt;executable&gt;node-red&lt;/executable&gt;
+  &lt;settings-path&gt;/etc/node-red.js&lt;/settings-path&gt;
+  &lt;theme&gt;dark&lt;/theme&gt;
+  &lt;flow-path&gt;/etc/node-red.json&lt;/flow-path&gt;
+  &lt;authentiation&gt;
+    &lt;editor username="admin" password="admin"&gt;&lt;/editor&gt;
+    &lt;ui username="admin" password="admin"&gt;&lt;/ui&gt;
+  &lt;/authentication&gt;
+  &lt;endpoint host="0.0.0.0" port="1880"&gt;&lt;/endpoint&gt;
+&lt;/node-red&gt;
 </code></pre></div>
 
-<p>These configuration keys are described <a href="#dnp3-module-overview">below</a>.</p>
-<h2 id="dnp3-module-overview">DNP3 Module Overview<a class="headerlink" href="#dnp3-module-overview" title="Permanent link">¶</a></h2>
-<p>The DNP3 Module can act as a DNP3 client or server. Each client can act as one or more DNP3 masters, and each server can act as one or more DNP3 outstations. A limitation is that currently, OT-sim only supports a single client connection per server. Another limitation would be support for just 32-bit analog, not 16- or 64-bit.</p>
-<p><img alt="Client &amp; Server" src="../images/client-server.png"></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>OT-sim uses OpenDNP3 v3.1.2, please visit <a href="https://dnp3.github.io/docs/guide/3.0.0/">their content</a> if you have questions on the library.</p>
-</div>
-<h3 id="capabilities">Capabilities<a class="headerlink" href="#capabilities" title="Permanent link">¶</a></h3>
-<ul>
-<li>
-<p>Handles select before operate</p>
-</li>
-<li>
-<p>Supports class scans</p>
-</li>
-<li>
-<p>Supports unsolicited responses</p>
-</li>
-<li>
-<p>Supports outstation restarts</p>
-</li>
-<li>
-<p>Supports binary inputs and outputs</p>
-</li>
-</ul>
-<h3 id="default-values">Default Values<a class="headerlink" href="#default-values" title="Permanent link">¶</a></h3>
-<p>OT-sim supports all group and variation options that OpenDNP3 does. There are default settings if you do not specify a group and variation.</p>
-<p>The <code>sgvar</code> key is the static group variation and has the following default values:</p>
-<ul>
-<li>
-<p>Binary input is group <code>1</code> variation <code>2</code></p>
-</li>
-<li>
-<p>Analog input is group <code>30</code> variation <code>6</code></p>
-</li>
-<li>
-<p>Binary output is none</p>
-</li>
-<li>
-<p>Analog output is none</p>
-</li>
-</ul>
-<p>The <code>egvar</code> key is the event group variation and has the following default values:</p>
-<ul>
-<li>
-<p>Binary input is group <code>2</code> variation <code>2</code></p>
-</li>
-<li>
-<p>Analog input is group <code>32</code> variation <code>6</code></p>
-</li>
-<li>
-<p>Binary output is none</p>
-</li>
-<li>
-<p>Analog output is none</p>
-</li>
-</ul>
-<p>Select before operate — the <code>sbo</code> key — is a binary value and it defaults to <code>false</code>.</p>
-<p>The <code>class</code> key defaults to <code>Class1</code>; others are supported.</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<p>Additional class scan rate options available in the DNP3 module need to be documented.</p>
-</div></div>
+<p>In this example, we run a Node-RED server listening on port <code>1880</code> on all
+interfaces with authentication enabled and loading the existing flow described
+in the JSON file located at <code>/etc/node-red.json</code>. Except for <code>flow-path</code> and
+<code>authentication</code>, all of the settings in this example are the defaults. The
+default value for <code>flow-path</code> is an empty string, causing Node-RED to load an
+empty flow when it starts up. The <code>authentication</code> setting is empty by default,
+causing the editor and UI to be accessible without credentials.</p>
+<p>To use all the default settings, just add <code>&lt;node-red&gt;&lt;/node-red&gt;</code> to the OT-sim
+configuration file.</p>
+<h2 id="node-red-module-overview">Node-RED Module Overview<a class="headerlink" href="#node-red-module-overview" title="Permanent link">¶</a></h2>
+<p>OT-sim is capable of integrating with Node-RED using custom Node-RED nodes
+distributed as part of the OT-sim source code. The Node-RED integration is
+enabled and configured using the OT-sim <code>node-red</code> module as described above,
+which runs a Node-RED server alongside OT-sim for users to access.</p>
+<p>Two custom OT-sim Node-RED nodes are available, <code>ot-sim in</code> and <code>ot-sim out</code>.
+Each node is automatically configured with the correct OT-sim message bus
+endpoints to connect to via the Node-RED settings file that is generated by the
+OT-sim module.</p>
+<p>There are at least two ways the Node-RED integration can prove useful:</p>
+<ol>
+<li>Using Node-RED flows to provide an HMI</li>
+<li>Using Node-RED flows as a replacement for the logic module</li>
+</ol>
+<h2 id="demo-video">Demo Video<a class="headerlink" href="#demo-video" title="Permanent link">¶</a></h2>
+<p>This video demonstrates the use of Node-RED with OT-sim as a simple Human
+Machine Interface (HMI) that monitors the per-unit voltage of Bus 692 and
+controls the breaker status of Line 650632.</p>
+<p>The <code>Procfile.single</code> process file is used in the video, which starts a HELICS
+broker, an OpenDSS federate running a simulation of the IEEE 13 bus system, and
+an OT-sim device using the <code>config/single-device/device.xml</code> configuration file.
+This configuration file starts, among other things, the I/O module (a HELICS
+federate) and the Node-RED module.</p>
+<p><div class="video-container"><iframe src="../videos/node-red.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<p>To recreate the environment in the video, execute the following steps:</p>
+<ol>
+<li>Build the <code>ot-sim</code> Docker image: <code>docker build -t ot-sim .</code></li>
+<li>Run an <code>ot-sim</code> Docker container: <code>docker run -it --rm --net host ot-sim bash</code></li>
+<li>Execute the process file in the container: <code>hivemind Procfile.single</code></li>
+<li>Browse to Node-RED: http://localhost:1880</li>
+<li>Press <code>ctrl-i</code> in the Node-RED editor and import the following flow</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>[
+    {
+        "id": "172c64bad7a4e035",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "42fb9f9b2e9aae42",
+        "type": "ot-sim in",
+        "z": "172c64bad7a4e035",
+        "tag": "bus-692.voltage",
+        "updates": false,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "2ea9878d91da5797"
+            ]
+        ]
+    },
+    {
+        "id": "2ea9878d91da5797",
+        "type": "ui_gauge",
+        "z": "172c64bad7a4e035",
+        "name": "",
+        "group": "cd530edaea3a5672",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Bus 692 Voltage",
+        "label": "p.u.",
+        "format": "{{value | number:3}}",
+        "min": "0.9",
+        "max": "1.35",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "0.96",
+        "seg2": "1.1",
+        "diff": false,
+        "className": "",
+        "x": 860,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1b2b2a5122909a56",
+        "type": "ot-sim out",
+        "z": "172c64bad7a4e035",
+        "tag": "line-650632.closed",
+        "x": 870,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "0abc55bd5a667739",
+        "type": "ui_button",
+        "z": "172c64bad7a4e035",
+        "name": "",
+        "group": "cd530edaea3a5672",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Trip",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "1b2b2a5122909a56"
+            ]
+        ]
+    },
+    {
+        "id": "3bea0bd21f09d964",
+        "type": "ui_button",
+        "z": "172c64bad7a4e035",
+        "name": "",
+        "group": "cd530edaea3a5672",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Close",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 570,
+        "y": 540,
+        "wires": [
+            [
+                "1b2b2a5122909a56"
+            ]
+        ]
+    },
+    {
+        "id": "9c5eaebffe2ff15e",
+        "type": "ot-sim in",
+        "z": "172c64bad7a4e035",
+        "tag": "line-650632.closed",
+        "updates": false,
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "5350b0834d821a9d",
+                "104a4cdbed5f1039"
+            ]
+        ]
+    },
+    {
+        "id": "5350b0834d821a9d",
+        "type": "change",
+        "z": "172c64bad7a4e035",
+        "name": "Trip Enabled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "msg.payload = 1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 440,
+        "wires": [
+            [
+                "0abc55bd5a667739"
+            ]
+        ]
+    },
+    {
+        "id": "104a4cdbed5f1039",
+        "type": "change",
+        "z": "172c64bad7a4e035",
+        "name": "Close Enabled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "msg.payload = 0",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 520,
+        "wires": [
+            [
+                "3bea0bd21f09d964"
+            ]
+        ]
+    },
+    {
+        "id": "cd530edaea3a5672",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "893465dd7a980296",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "893465dd7a980296",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
+</code></pre></div>
+
+<h2 id="ot-sim-in"><code>ot-sim in</code><a class="headerlink" href="#ot-sim-in" title="Permanent link">¶</a></h2>
+<p>The <code>ot-sim in</code> node subscribes to the <code>RUNTIME</code> topic on the OT-sim message bus
+and processes <code>Status</code> messages published by OT-sim devices. The node is
+configured with a tag, and outputs the tag name as the message topic and the tag
+value as the message payload to other nodes it's connected to in the flow. This
+node can be configured to also process <code>Update</code> messages via the <code>Include
+Updates</code> checkbox in the node editor.</p>
+<h2 id="ot-sim-out"><code>ot-sim out</code><a class="headerlink" href="#ot-sim-out" title="Permanent link">¶</a></h2>
+<p>The <code>ot-sim in</code> node pushes <code>Update</code> messages to the <code>RUNTIME</code> topic on the
+OT-sim message bus. The node is configured with a tag, and pushes incoming
+values from nodes connected to it in the flow as updates for the tag.</p></div>
 
 
 

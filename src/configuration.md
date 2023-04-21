@@ -25,6 +25,7 @@ The following example configuration file has been separated into sections relate
   <module name="modbus">ot-sim-modbus-module {{config_file}}</module>
   <module name="dnp3">ot-sim-dnp3-module {{config_file}}</module>
   <module name="ground-truth">ot-sim-ground-truth-module {{config_file}}</module>
+  <module name="node-red">ot-sim-node-red-module {{config_file}}</module>
 </cpu>
 ```
 
@@ -55,6 +56,22 @@ The following example configuration file has been separated into sections relate
     <index-base-name>ot-sim</index-base-name>
   </elastic>
 </ground-truth>
+```
+
+## [Node-RED Module](node_red.md)
+
+```
+<node-red>
+  <executable>node-red</executable>
+  <settings-path>/etc/node-red.js</settings-path>
+  <theme>dark</theme>
+  <flow-path></flow-path>
+  <authentiation>
+    <editor username="admin" password="admin"></editor>
+    <ui username="admin" password="admin"></ui>
+  </authentication>
+  <endpoint host="0.0.0.0" port="1880"></endpoint>
+</node-red>
 ```
 
 ## [Modbus Module](modbus.md)
