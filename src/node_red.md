@@ -58,7 +58,7 @@ an OT-sim device using the `config/single-device/device.xml` configuration file.
 This configuration file starts, among other things, the I/O module (a HELICS
 federate) and the Node-RED module.
 
-![type:video](videos/node-red.mp4)
+![type:video](https://player.vimeo.com/video/821362034?h=739951bd86&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="3838" height="2304" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="node-red.mp4)
 
 To recreate the environment in the video, execute the following steps:
 
