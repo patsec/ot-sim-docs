@@ -287,6 +287,6 @@ Updates` checkbox in the node editor.
 
 ## `ot-sim out`
 
-The `ot-sim in` node pushes `Update` messages to the `RUNTIME` topic on the
+The `ot-sim out` node pushes `Update` messages to the `RUNTIME` topic on the
 OT-sim message bus. The node is configured with a tag, and pushes incoming
 values from nodes connected to it in the flow as updates for the tag.
