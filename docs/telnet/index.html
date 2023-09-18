@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../getting_started/">
+        <link rel="prev" href="../node_red/">
       
-      
-        <link rel="next" href="../io/">
       
       
       <link rel="icon" href="../images/favicon.ico">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Ground Truth Module - OT-sim documentation</title>
+        <title>Telnet Module - OT-sim documentation</title>
       
     
     
@@ -81,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ground-truth-module" class="md-skip">
+        <a href="#telnet-module" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ground Truth Module
+              Telnet Module
             
           </span>
         </div>
@@ -329,29 +327,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Ground Truth Module
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ground_truth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,40 +338,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-example" class="md-nav__link">
-    Configuration Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -516,9 +460,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../telnet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Telnet Module
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -527,6 +491,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-example" class="md-nav__link">
+    Configuration Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telnet-module-overview" class="md-nav__link">
+    Telnet Module Overview
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -565,8 +563,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#telnet-module-overview" class="md-nav__link">
+    Telnet Module Overview
   </a>
   
 </li>
@@ -589,47 +587,25 @@
   
 
 
-<div><h1 id="ground-truth-module">Ground Truth Module<a class="headerlink" href="#ground-truth-module" title="Permanent link">¶</a></h1>
+<div><h1 id="telnet-module">Telnet Module<a class="headerlink" href="#telnet-module" title="Permanent link">¶</a></h1>
 <h2 id="configuration-example">Configuration Example<a class="headerlink" href="#configuration-example" title="Permanent link">¶</a></h2>
 <p>Example section from <a href="../configuration/">configuration</a> file:</p>
-<div class="codehilite"><pre><span></span><code>&lt;ground-truth&gt;
-  &lt;elastic&gt;
-    &lt;endpoint&gt;http://localhost:9200&lt;/endpoint&gt;
-    &lt;index-base-name&gt;ot-sim&lt;/index-base-name&gt;
-  &lt;/elastic&gt;
-&lt;/ground-truth&gt;
+<div class="codehilite"><pre><span></span><code>&lt;telnet&gt;
+  &lt;endpoint&gt;:23&lt;/endpoint&gt;
+  &lt;banner&gt;default&lt;/banner&gt;
+&lt;/telnet&gt;
 </code></pre></div>
 
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¶</a></h2>
-<p>The ground truth module is a simple module that sends any points it sees
-published to the message bus to ElasticSearch as a document.</p>
-<p>By default, it sends the documents to an index named <code>ot-sim-YYYY.mm.dd</code>, but
-this can be configured via the <code>&lt;index-base-name&gt;</code> configuration setting.</p>
-<p>The default mapping for the index used looks like the following:</p>
-<div class="codehilite"><pre><span></span><code>{
-  "mappings": {
-    "properties": {
-      "@timestamp": {
-        "type": "date"
-      },
-      "source": {
-        "type": "keyword"
-      },
-      "field": {
-        "type": "text"
-      },
-      "value": {
-        "type": "double"
-      }
-    }
-  }
-}
-</code></pre></div>
-
-<p>When documents are sent to the index, <code>source</code> maps to the hostname of the
-machine ot-sim is running on and <code>field</code> maps to the point's <code>tag</code>. If the point
-has a non-zero <code>ts</code> value it's used for <code>@timestamp</code>, otherwise the current time
-is used.</p></div>
+<h2 id="telnet-module-overview">Telnet Module Overview<a class="headerlink" href="#telnet-module-overview" title="Permanent link">¶</a></h2>
+<p>The Telnet Module adds a Telnet server to the OT-sim message bus that
+automatically subscribes to all status updates published by other modules to the
+backplane. It adds all published tags and values to internal memory and makes
+them available via the <code>query</code> command. Tag values, even ones not yet known by
+the Telnet Module, can also be updated via the <code>write</code> command.</p>
+<p>In addition, the Telnet Module includes a <code>modules</code> command that will list all
+the OT-sim modules managed by the CPU module. It also includes an <code>enable</code>
+command and a <code>disable</code> command for enabling and disabling modules managed by
+the CPU module.</p></div>
 
 
 

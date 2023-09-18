@@ -58,6 +58,15 @@ The following example configuration file has been separated into sections relate
 </ground-truth>
 ```
 
+## [Telnet Module](telnet.md)
+
+```
+<telnet>
+  <endpoint>:23</endpoint>
+  <banner>default</banner>
+</telnet>
+```
+
 ## [Node-RED Module](node_red.md)
 
 ```

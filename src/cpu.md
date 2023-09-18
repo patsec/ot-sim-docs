@@ -31,19 +31,28 @@ The example above also includes `<api-endpoint>`, which, when provided, enables 
 
 ```
 # list of all points currently known by the CPU module
-GET  /api/v1/query
+GET /api/v1/query
 
 # get WebSocket that will receive a list of points every 5s
-GET  /api/v1/query/ws
+GET /api/v1/query/ws
 
 # get a specific point by tag name
-GET  /api/v1/query/{tag}
+GET /api/v1/query/{tag}
 
 # send one or more points to be updated via JSON
 POST /api/v1/write
 
 # update specific point by tag name
 POST /api/v1/write/{tag}/{value}
+
+# list of all modules managed by the CPU module
+GET /api/v1/modules
+
+# enable a module that has been previously disabled
+POST /api/v1/modules/{name}
+
+# disable a module that is currently enabled
+DELETE /api/v1/modules/{name}
 ```
 
 !!! tip
